@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventas Realizadas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+
+        .form-item {
+            border: 2px solid black;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .item-row {
+            display: flex;
+            justify-content: space-between;
+            align-elementos: center;
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+
+
+        .centered-container {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-center">Licorería El Cacique</h1>
+    <hr>
+
+    <div class="container centered-container my-5">
+        <div class="form-item">
+            <div class="form-row">
+                <div class="col">
+                    <label for="producto">Producto</label>
+
+                    <select class="form-control" id="producto" name="producto">
+                        <option value="POKER 750">POKER 750</option>
+                        <option value="POKER LITRON">POKER LITRON</option>
+                        <option value="GUARO MEDIA">GUARO MEDIA</option>
+                        <option value="GUARO LITRO">GUARO LITRO</option>
+                        <option value="RON CALDAS 1/2">RON CALDAS 1/2</option>
+                        <option value="RON CALDAS LITRO">RON CALDAS LITRO</option>
+                        <option value="GATORED">GATORED</option>
+                        <option value="AGUA">AGUA</option>
+                        <option value="COCACOLA">COCACOLA</option>
+                        <option value="POKER LATA">POKER LATA</option>
+                        <option value="LIGHT LATA">LIGHT LATA</option>
+                        <option value="BUDWEISER LATA">BUDWEISER LATA</option>
+                        <option value="AGUILA LATA">AGUILA LATA</option>
+                        <option value="CORONITA">CORONITA</option>
+                        <option value="SODA">SODA</option>
+                        <option value="COSTEÑA">COSTEÑA</option>
+                </select>
+
+                </div>
+                <div class="col">
+                    <label for="cantidad">Cantidad</label>
+                    <input type="text" class="form-control" name="cantidad" id="cantidad"
+                        placeholder="Escribe la cantidad">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label for="valor">Valor Unidad</label>
+                    <input type="text" class="form-control" name="valor" id="valor"
+                        placeholder="Escribe el valor x Unidad">
+                </div>
+                <div class="col">
+                    <input type="hidden" name="total" id="total">
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <button type="button" class="btn btn-info" onclick="agregarElemento()">Agregar</button>
+            </div>
+        </div>
+    </div>
+
+    <div style="width: 80%; text-align: center; margin: 0 auto;">
+        <h2 class="text-center mb-3">Ventas Realizadas</h2>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <strong>Producto</strong>
+            </div>
+            <div class="col">
+                <strong>Cantidad</strong>
+            </div>
+            <div class="col">
+                <strong>Valor</strong>
+            </div>
+            <div class="col">
+                <strong>Total</strong>
+            </div>
+            <div class="col">
+                <strong>Eliminar</strong>
+            </div>
+        </div>
+        <div id="elementos"></div>
+    </div>
+    <script src="./js/objetoScript.js">  </script>
+    
+</body>
+
+</html>

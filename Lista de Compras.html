@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+    <link rel="stylesheet" 
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+          crossorigin="anonymous">
+
+          <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f7f7f7;
+                margin: 0;
+                padding: 0;
+            }
+    
+            .container {
+                margin-top: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+    
+            h1 {
+                color: #007bff;
+            }
+    
+            hr {
+                margin: 20px 0;
+            }
+    
+            .input-container {
+                display: flex;
+            }
+    
+            #elemento {
+                flex: 1;
+                margin-right: 10px;
+            }
+    
+            .btn {
+                cursor: pointer;
+            }
+    
+            .elemento {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                padding: 10px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+                transition: background-color 0.2s ease;
+            }
+    
+            .elemento:hover {
+                background-color: #eaeaea;
+            }
+    
+            .btn-danger {
+                background-color: #dc3545;
+                color: #fff;
+            }
+    
+            .btn-danger:hover {
+                background-color: #c82333;
+            }
+        </style>
+</head>
+<body>
+
+    <h1 class="text-center">Agregar lista para compras</h1>
+    <hr>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-10 mb-2">     
+                <input type="text" class="form-control" name="elemento" id="elemento" 
+                    placeholder="Escriba el producto, si son varios puede separarlos por comas">
+            </div>
+            <div class="col text-center mb-2">
+                <button type="button" class="btn btn-info" onclick="agregarElemento()">Agregar</button>
+            </div>
+        </div>
+
+        <div style="width: 70%; text-align: justify; margin: 5%;">
+            <h2 class="text-center mb-3">Lista de artículos</h2>
+            <hr>
+            <div class="row" id="elementos">No hay elementos</div>
+        </div>
+    </div>
+
+
+    <script src="./js/arrayScript.js"></script>
+    
+</body>
+</html>
